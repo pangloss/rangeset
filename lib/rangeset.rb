@@ -1,5 +1,5 @@
-p version: require("rangeset/version")
-p range: require("rangeset/range")
+require "rangeset/version"
+require "rangeset/range"
 
 class RangeSet
   class << self
@@ -23,9 +23,6 @@ class RangeSet
     end
 
     def union(left, right)
-      if left.is_a? Array
-        raise 'wtf'
-      end
       if not left
         right
       elsif not right
