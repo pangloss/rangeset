@@ -76,8 +76,8 @@ class RangeSet
       return [left, nil, nil] unless right
       return [nil, nil, right] unless left
       int = intersection(left, right)
-      in_left = left.difference int
-      in_right = right.difference int
+      in_left = difference left, int
+      in_right = difference right, int
       [in_left, int, in_right]
     end
   end
