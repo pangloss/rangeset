@@ -1,3 +1,3 @@
-module Rangeset
-  VERSION = "0.0.1"
+class RangeSet
+  VERSION = "0.1.0"
 end
