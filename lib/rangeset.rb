@@ -1,8 +1,15 @@
+lib_path = File.expand_path(File.join(File.dirname(__FILE__), '../lib'))
+$:.unshift lib_path unless $:.any? { |path| path == lib_path }
+
 require "rangeset/version"
 require "rangeset/range"
 
 class RangeSet
   class << self
+    def [](*ranges)
+      build ranges
+    end
+
     def build(ranges)
       if ranges
         if ranges.is_a? Array
@@ -172,5 +179,9 @@ class RangeSet
       elsif other.is_a? Range and ranges.count == 1
         ranges == [other]
       end)
+  end
+
+  def inspect
+    "RangeSet#{ ranges.inspect }"
   end
 end
