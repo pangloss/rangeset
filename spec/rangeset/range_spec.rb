@@ -22,6 +22,12 @@ describe Range do
   describe '#diff' do
     subject { 30..40 }
 
+    context 'diff with nill' do
+      it do
+        subject.diff(nil).should == [30..40, nil, nil]
+      end
+    end
+
     context 'partial overlap' do
       let(:other) { 35..140 }
       it do

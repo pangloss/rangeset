@@ -15,6 +15,7 @@ class Range
   class << self
     # [only in left, in both, only in right]
     def diff(left, right)
+      return [left, nil, nil] unless right
       if left.is_a? RangeSet or right.is_a? RangeSet
         return RangeSet.diff left, right
       end
