@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["dw@xnlogic.com"]
   gem.description   = %q{Set operations on ranges and range sets}
   gem.summary       = %q{Set operations on ranges and range sets}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/pangloss/rangeset"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
